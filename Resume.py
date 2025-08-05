@@ -1,3 +1,8 @@
+pip install python-docx
+pip install fpdf
+pip install PyPDF2
+pip install streamlit
+
 import streamlit as st
 from docx import Document
 from PyPDF2 import PdfReader
@@ -77,3 +82,4 @@ if st.button("Generate Resume"):
     st.success("✅ Resume generated successfully!")
     st.download_button("📄 Download Resume (.docx)", data=buffer, file_name=f"{name.replace(' ', '_')}_Resume.docx",
                        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+
